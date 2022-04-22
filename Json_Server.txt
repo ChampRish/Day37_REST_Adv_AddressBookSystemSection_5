@@ -23,7 +23,11 @@ RStep 4: Adding New Entry Lisa.Here We notice HTTP Method POST is used as well a
 
 --- curl -X POST-H "Content-Type:application/json" -d'{"name":"Lisa","contact":"9627974345"}' "http://localhost:4000/Addressbook/create" ---
 
-Step 5: for Update a contact of Lisa.
+RStep 5: for Update a contact of Lisa.
 
 --- curl -XPUT -H "Content-Type:application/json" -d'{"name":"Lisa","contact":"9837694080"}' "http://localhost:4000/Addressbook/update/4" ---
+
+RStep 6: For Deleting Records of Lisa.
+
+--- curl -XDELETE -H "Content-Type:application/json" "http://localhost:4000/Addressbook/delete/4" ---
 
