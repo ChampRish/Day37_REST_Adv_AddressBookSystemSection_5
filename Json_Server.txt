@@ -1,24 +1,29 @@
-Installing JSON Server :-
+RInstalling JSON Server RG:-
 
 --npm install -g json-server--
 
-Check JSON Server version :-
+RCheck JSON Server version RG:-
 
 --json-server -v --
 
-Step 1: Create empDB.json file.
+RStep 1: Create ADDDB.json file.
 
-   touch empDB.json
-   cat empDB.json
-   nano empDB.json
-   cat empDB.json
+   touch ADDDB.json
+   cat ADDDB.json
+   nano ADDDB.json
+   cat ADDDB.json
 
-Step 2: Run JSON server.This will create REST API for empDB
--- json-server--watch empDB.json --
+RStep 2: Run JSON server.This will create REST API for ADDDB
+-- json-server--watch ADDDB.json --
 
-step 3: Get all Employees using curl command
--- curl -X GET -H "Content-Type:application/json" "http://localHost:4000/employee/list" --
+Rstep 3: Get all Entries using curl command
+-- curl -X GET -H "Content-Type:application/json" "http://localHost:4000/Addressbook/list" --
 
-Step 4: Adding New Employee Lisa.Here We notice HTTP Method POST is used as well as using-d option JSON is passed in the body
+RStep 4: Adding New Entry Lisa.Here We notice HTTP Method POST is used as well as using-d option JSON is passed in the body
 
---- curl -X POST-H "Content-Type:application/json" -d'{"name":"Lisa","contact":"9627974345"}' "http://localhost:4000/employee/create" ---
+--- curl -X POST-H "Content-Type:application/json" -d'{"name":"Lisa","contact":"9627974345"}' "http://localhost:4000/Addressbook/create" ---
+
+Step 5: for Update a contact of Lisa.
+
+--- curl -XPUT -H "Content-Type:application/json" -d'{"name":"Lisa","contact":"9837694080"}' "http://localhost:4000/Addressbook/update/4" ---
+
